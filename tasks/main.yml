@@ -1,0 +1,19 @@
+---
+  
+# http://docs.ansible.com/ansible/latest/copy_module.html
+- name: Enable terminal syntax highlighting
+  copy:
+    src: "{{ role_path }}/files/bashrc"
+    dest: "/root/.bashrc"
+  
+# http://docs.ansible.com/ansible/latest/git_module.html
+- name: Install more robust Nano syntax highlighting
+  git:
+    repo: 'https://github.com/scopatz/nanorc.git'
+    dest: /root/.nano
+
+# http://docs.ansible.com/ansible/latest/copy_module.html
+- name: Configure Nano syntax highlighting
+  copy:
+    src: "{{ role_path }}/files/nanorc"
+    dest: "/root/.nanorc"
