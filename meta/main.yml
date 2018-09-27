@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  role_name: "nano-highlighting"
+  role_name: nano_highlighting
   author: apolloclark
   description: Install and configure Nano editor syntax highlighting
   company: "Apollo Clark"
